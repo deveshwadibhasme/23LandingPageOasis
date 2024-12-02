@@ -1,0 +1,71 @@
+.service {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service .heading {
+  max-width: 300px !important;
+  width: 100%;
+}
+
+.service-content {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.service-cnt {
+  display: flex;
+  max-width: 1170px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.service-cnt .image {
+  max-width: 550px;
+  min-height: 320px;
+  margin: 0 auto;
+}
+
+.service-cnt .text-cnt {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.service-cnt .text-cnt h1 {
+  font-size: var(--subheading-font-size);
+  color: var(--theme-color);
+}
+
+.service-cnt .text-cnt p {
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 500px;
+}
+
+/* on scroll */
+.service-cnt .text-cnt.right {
+  transform: translateX(500px);
+  opacity: 0.4;
+  transition: transform 0.8s;
+}
+.service-cnt .text-cnt.left {
+  transform: translateX(-500px);
+  opacity: 0.4;
+  transition: transform 0.8s;
+}
+
+.service-cnt .text-cnt.arrived {
+  transform: translateX(0px);
+  opacity: 1;
+}

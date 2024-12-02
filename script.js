@@ -15,7 +15,7 @@ document.addEventListener('click', (e) => {
 })
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= '500') {
+    if (window.scrollY >= '470') {
         document.querySelector('header').style.backgroundColor = 'black';
         document.querySelector('.about-content').classList.add('arrived');
     }
@@ -23,5 +23,20 @@ window.addEventListener('scroll', () => {
         document.querySelector('header').style.backgroundColor = 'transparent';
         document.querySelector('.about-content').classList.remove('arrived');
     }
+
+    // let childCount = document.querySelector('.service-content').childElementCount
     console.clear()
+    console.log(window.scrollY);
+
+    let childCount = document.querySelector('.service-content').childElementCount
+
+    if (window.scrollY >= 1150) {
+        document.querySelectorAll('.service-cnt .text-cnt').forEach((ele) => {
+            ele.classList.add('arrived');
+        })
+    } else {
+        document.querySelectorAll('.service-cnt .text-cnt').forEach((ele) => {
+            ele.classList.remove('arrived');
+        })
+    }
 })

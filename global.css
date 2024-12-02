@@ -15,6 +15,7 @@
   --home-gradient: linear-gradient(rgb(127, 2, 130), rgb(113, 70, 206));
   --theme-color: rgb(108, 92, 231);
   --heading-font-size: 35px;
+  --subheading-font-size:30px;
   --footer-color: rgb(213, 56, 149);
 }
 
@@ -52,8 +53,9 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  user-select: none;
 
-  span {
+  .btn-inner{
     z-index: 2 !important;
     position: relative;
   }
@@ -91,12 +93,12 @@ button {
   overflow: hidden;
 
   &::after {
-    background-color: violet;
+    background-color: rgb(218, 159, 227);
   }
 }
 
 /* Page Heading */
-.page h1 {
+.page .heading {
   margin: 0 auto;
   font-size: var(--heading-font-size);
   color: var(--theme-color);
@@ -104,6 +106,8 @@ button {
   position: relative;
   max-width: 210px;
   cursor: none;
+  z-index: 4;
+  user-select: none;
 
   &::after {
     content: "";
