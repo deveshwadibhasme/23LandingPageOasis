@@ -14,6 +14,7 @@ document.addEventListener('click', (e) => {
 
 })
 
+// scroll events
 window.addEventListener('scroll', () => {
     if (window.scrollY >= '470') {
         document.querySelector('header').style.backgroundColor = 'black';
@@ -24,19 +25,24 @@ window.addEventListener('scroll', () => {
         document.querySelector('.about-content').classList.remove('arrived');
     }
 
-    // let childCount = document.querySelector('.service-content').childElementCount
-    console.clear()
-    console.log(window.scrollY);
-
-    let childCount = document.querySelector('.service-content').childElementCount
-
-    if (window.scrollY >= 1150) {
-        document.querySelectorAll('.service-cnt .text-cnt').forEach((ele) => {
-            ele.classList.add('arrived');
+    // console.log(window.scrollY);
+    if (window.innerWidth > 867) {
+        const observer = new IntersectionObserver(entry => {
+            entry.forEach(enter => {
+                if (enter.isIntersecting) {
+                    enter.target.classList.add('arrived');
+                }
+            })
         })
-    } else {
-        document.querySelectorAll('.service-cnt .text-cnt').forEach((ele) => {
-            ele.classList.remove('arrived');
+        document.querySelectorAll('.service-cnt .text-cnt').forEach((box) => {
+            observer.observe(box)
+        })
+    } else if (window.scrollY >= 1560) {
+        document.querySelectorAll('.service-cnt .text-cnt').forEach((box) => {
+            box.classList.add('arrived');
         })
     }
+
+
+
 })

@@ -41,6 +41,7 @@
   max-width: 600px;
 }
 
+
 .service-cnt .text-cnt h1 {
   font-size: var(--subheading-font-size);
   color: var(--theme-color);
@@ -68,4 +69,13 @@
 .service-cnt .text-cnt.arrived {
   transform: translateX(0px);
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .service-cnt {
+    flex-direction: column;
+  }
+  .service-cnt .text-cnt button{
+    margin: 0 auto;
+  }
 }
