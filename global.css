@@ -1,0 +1,46 @@
+@import url(./css/header.css);
+
+@import url(./css/hero.css);
+
+@import url(./css/about.css);
+
+@import url(./css/service.css);
+
+@import url(./css/team.css);
+
+@import url(./css/footer.css);
+
+
+/* variables */
+:root{
+    --home-gradient: linear-gradient(rgb(127,2,130), rgb(113,70,206));
+    --theme-color : rgb(108,92,231);
+    --heading-font-size:35px;
+    --footer-color:rgb(213,56,149);
+}
+
+/* reset styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;     /*so that paddding doesn affect sizing */
+    font-family: 'Poppins', sans-serif;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    button{
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+}
+
+main{
+    max-width: 100vw;
+    width: 100%;
+}
