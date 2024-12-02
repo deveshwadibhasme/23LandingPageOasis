@@ -19,6 +19,7 @@
     padding-inline: 30px;
     width: 100%;
     margin: 0 auto;
+    transition: transform 0.6s;
 }
 
 .about-text button{
@@ -44,6 +45,14 @@
 .about-content .image{
     max-width: 600px;
     width: 100%;
+}
+
+.about-content{
+    transform: scale(0.2);
+}
+
+.about-content.arrived{
+    transform: scale(1);
 }
 
 
