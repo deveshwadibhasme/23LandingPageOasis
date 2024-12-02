@@ -80,9 +80,9 @@
   bottom: 0;
   left: 0;
   height: 110px;
-  width: 100%;
+  width: 100vw;
   background: url(/assets/wave.png);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: repeat-x;
   animation: waves 10s linear infinite;
 }
@@ -113,5 +113,8 @@
   }
   .hero-content h3 {
     font-size: 18px;
+  }
+  .hero{
+    position: relative;
   }
 }
