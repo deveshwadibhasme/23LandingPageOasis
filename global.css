@@ -10,37 +10,133 @@
 
 @import url(./css/footer.css);
 
-
 /* variables */
-:root{
-    --home-gradient: linear-gradient(rgb(127,2,130), rgb(113,70,206));
-    --theme-color : rgb(108,92,231);
-    --heading-font-size:35px;
-    --footer-color:rgb(213,56,149);
+:root {
+  --home-gradient: linear-gradient(rgb(127, 2, 130), rgb(113, 70, 206));
+  --theme-color: rgb(108, 92, 231);
+  --heading-font-size: 35px;
+  --footer-color: rgb(213, 56, 149);
 }
 
 /* reset styles */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;     /*so that paddding doesn affect sizing */
-    font-family: 'Poppins', sans-serif;
-    img{
-        height: 100%;
-        width: 100%;
-    }
-    a{
-        color: inherit;
-        text-decoration: none;
-    }
-    button{
-        cursor: pointer;
-        border: none;
-        outline: none;
-    }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*so that paddding doesn affect sizing */
+  font-family: "Poppins", sans-serif;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
-main{
-    max-width: 100vw;
+/* Complete Website Wrapper */
+main {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* All Buttons */
+button {
+  font-weight: 400;
+  box-shadow: 0px 0px 4px #111;
+  position: relative;
+  transition: all 0.8s;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  span {
+    z-index: 2 !important;
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: skyblue;
     width: 100%;
+    transition: all 0.6s;
+    height: 0;
+  }
+
+  &:hover {
+    letter-spacing: 2px;
+    color: #fff;
+    &::after {
+      height: 90%;
+    }
+  }
+}
+
+/* Page Button */
+.page button {
+  /* Other Styling is from global css button */
+  padding: 5px 15px;
+  border-radius: 40px;
+  font-size: 17px;
+  max-width: 160px;
+  width: 100%;
+  background-color: var(--theme-color);
+  color: #fff;
+  overflow: hidden;
+
+  &::after {
+    background-color: violet;
+  }
+}
+
+/* Page Heading */
+.page h1 {
+  margin: 0 auto;
+  font-size: var(--heading-font-size);
+  color: var(--theme-color);
+  margin-bottom: 90px;
+  position: relative;
+  max-width: 210px;
+  cursor: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border: 5px solid var(--theme-color);
+    border-bottom: 0;
+    border-right: 0;
+    transition: all 0.8s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border: 5px solid var(--theme-color);
+    border-top: 0;
+    border-left: 0;
+    transition: all 0.8s;
+  }
+
+  &:hover {
+    &::after {
+      transform: rotateX(180deg) translateY(-18px);
+    }
+    &::before {
+      transform: rotateX(180deg) translateY(18px);
+    }
+  }
 }
