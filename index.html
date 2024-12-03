@@ -20,19 +20,19 @@
                     <h2 class="cmp-name">Oasis Infobyte</h2>
                 </div>
                 <nav>
-                    <a href="/">Home</a>
-                    <a href="/">About</a>
-                    <a href="/">Services</a>
-                    <a href="/">Team</a>
-                    <a href="/">Contact</a>
-                    <a href="/">FAQ</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#service">Services</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#footer">FAQ</a>
                     <i class="fas fa-close"></i>
                 </nav>
                 <i class="fas fa-bars"></i>
             </div>
         </header>
 
-        <section class="hero"> <!-- wrap home page -->
+        <section class="hero" id="home"> <!-- wrap home page -->
             <div class="hero-content">
                 <h1>Build Your IT Here</h1>
                 <h3>you have a vision. we have a team to get you there</h3>
@@ -82,7 +82,7 @@
             </div>
         </section>
 
-        <div class="service page" id="service">
+        <section class="service page" id="service">
             <h1 class="heading">Our Services</h1>
             <div class="service-content">
                 <div class="service-cnt">
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="service-cnt">
-                    <div class="image">
+                    <div class="image" style="margin-top: 25px;">
                         <img src="/assets/animaton-service.svg" alt="animaton-service">
                     </div>
                     <div class="text-cnt left">
@@ -128,10 +128,106 @@
                         <button><span class="btn-inner">Read More</span></button>
                     </div>
                 </div>
-
             </div>
             <marquee behavior="smooth" direction="right">Coming Soon..</marquee>
-        </div>
+        </section>
+
+        <section class="team page" id="team">
+            <h1 class="heading">Our Team</h1>
+            <div class="team-card-container">
+                <div class="card">
+                    <div class="card-profile">
+                        <div class="profile-pic">
+                            <img src="/assets/man.png" alt="man">
+                        </div>
+                        <h2>Adarsh Prakash</h2>
+                        <h3>Web Development and Design</h3>
+                    </div>
+                    <div class="social-apps">
+                        <a href="#"><i class="fa fa-facebook"></i></a>   
+                        <a href="#"><i class="fa fa-linkedin"></i></a>   
+                        <a href="#"><i class="fa fab fa-instagram"></i></a>   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-profile">
+                        <div class="profile-pic">
+                            <img src="/assets/man.png" alt="man">
+                        </div>
+                        <h2>Lakshya Dutta</h2>
+                        <h3>Animation Designer</h3>
+                    </div>
+                    <div class="social-apps">
+                        <a href="#"><i class="fa fa-facebook"></i></a>   
+                        <a href="#"><i class="fa fa-linkedin"></i></a>   
+                        <a href="#"><i class="fa fab fa-instagram"></i></a>   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-profile">
+                        <div class="profile-pic">
+                            <img src="/assets/woman.png" alt="woman">
+                        </div>
+                        <h2>Nancy Dhir</h2>
+                        <h3>Human Resource</h3>
+                    </div>
+                    <div class="social-apps">
+                        <a href="#"><i class="fa fa-facebook"></i></a>   
+                        <a href="#"><i class="fa fa-linkedin"></i></a>   
+                        <a href="#"><i class="fa fab fa-instagram"></i></a>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact page" id="contact">
+            <h1 class="heading">Contact Us</h1>
+            <div class="contact-content">
+                <div class="image">
+                    <img src="/assets/contact-us.svg" alt="contact-us">
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="Message"></textarea>
+                        <button type="submit"><span class="btn-inner">Send</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content" id="footer">
+                <div class="contact-detail">
+                    <h2>Contact Info</h2>
+                    <div class="email">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info">services.oasisinfobyte@gmail.com</div>
+                    </div>
+                    <div class="address">
+                        <div class="icon">
+                            <i class="fas fa-location-arrow"></i>
+                        </div>
+                        <div class="info">
+                            Satya Niketan, South West New Delhi, India - 110021</div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <h2>Follow Us</h2>
+                    <a href="#"><i class="fa fa-facebook"></i></a>   
+                    <a href="#"><i class="fa fa-linkedin"></i></a>   
+                    <a href="#"><i class="fa fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="copyright-message">
+                <hr>
+                &copy; Copyright OASIS INFOBYTE. All Rights Reserved Designed by Team OASIS
+            </div>
+        </footer>
     </main>
 </body>
 

@@ -8,6 +8,8 @@
 
 @import url(./css/team.css);
 
+@import url(/css/contact.css);
+
 @import url(./css/footer.css);
 
 /* variables */
@@ -16,7 +18,7 @@
   --theme-color: rgb(108, 92, 231);
   --heading-font-size: 35px;
   --subheading-font-size:30px;
-  --footer-color: rgb(213, 56, 149);
+  --footer-color:  linear-gradient(rgb(113, 70, 206), rgb(127, 2, 130));
 }
 
 /* reset styles */
@@ -25,6 +27,7 @@
   margin: 0;
   box-sizing: border-box; /*so that paddding doesn affect sizing */
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
   img {
     height: 100%;
     width: 100%;
@@ -40,7 +43,7 @@ main {
   max-width: 100vw;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; 
 }
 
 /* All Buttons */
@@ -137,10 +140,10 @@ button {
 
   &:hover {
     &::after {
-      transform: rotateX(180deg) translateY(-18px);
+      transform: rotateX(180deg) translateY(-18px) scale(1);
     }
     &::before {
-      transform: rotateX(180deg) translateY(18px);
+      transform: rotateX(180deg) translateY(18px) scale(1);
     }
   }
 }

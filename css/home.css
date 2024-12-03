@@ -112,4 +112,14 @@
   .hero{
     position: relative;
   }
+  .wave {
+    animation: waves 15s linear infinite;
+  }
+  .wave-1 {
+    animation-duration: 9s;
+  }
+  
+  .wave-3{
+    animation-duration: 7s;
+  }
 }

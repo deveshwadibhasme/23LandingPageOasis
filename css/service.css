@@ -30,7 +30,7 @@
 
 .service-cnt .image {
   max-width: 550px;
-  min-height: 320px;
+  min-height: 300px;
   margin: 0 auto;
 }
 
@@ -40,7 +40,6 @@
   flex-direction: column;
   max-width: 600px;
 }
-
 
 .service-cnt .text-cnt h1 {
   font-size: var(--subheading-font-size);
@@ -75,7 +74,13 @@
   .service-cnt {
     flex-direction: column;
   }
-  .service-cnt .text-cnt button{
+  .service-cnt .text-cnt button {
     margin: 0 auto;
   }
+
+  .service-cnt:has(.text-cnt.left) {
+    flex-direction: column-reverse;
+  }
+
+
 }

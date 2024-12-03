@@ -1,4 +1,6 @@
 //click events
+
+console.clear()
 document.addEventListener('click', (e) => {
 
     if (e.target.className === 'fas fa-bars') {
@@ -11,13 +13,12 @@ document.addEventListener('click', (e) => {
         document.querySelector('nav').style.transform = 'scale(0)';
         document.querySelector('.fa-bars').classList.remove('clicked')
     }
-
 })
 
 // scroll events
 window.addEventListener('scroll', () => {
     if (window.scrollY >= '470') {
-        document.querySelector('header').style.backgroundColor = 'black';
+        document.querySelector('header').style.backgroundColor = 'var(--theme-color)';
         document.querySelector('.about-content').classList.add('arrived');
     }
     else {
@@ -25,24 +26,16 @@ window.addEventListener('scroll', () => {
         document.querySelector('.about-content').classList.remove('arrived');
     }
 
-    // console.log(window.scrollY);
-    if (window.innerWidth > 867) {
-        const observer = new IntersectionObserver(entry => {
-            entry.forEach(enter => {
-                if (enter.isIntersecting) {
-                    enter.target.classList.add('arrived');
-                }
-            })
-        })
-        document.querySelectorAll('.service-cnt .text-cnt').forEach((box) => {
-            observer.observe(box)
-        })
-    } else if (window.scrollY >= 1560) {
-        document.querySelectorAll('.service-cnt .text-cnt').forEach((box) => {
-            box.classList.add('arrived');
-        })
-    }
+    const boxes = document.querySelectorAll('.service-cnt .text-cnt').forEach((ele)=>{
+        const box = ele.getBoundingClientRect()
+        if(window.innerHeight > box.top){
+            ele.classList.add('arrived');
+            // console.log('box is in view');
+        }else{
+            ele.classList.remove('arrived');
+        }
+    })
 
-
+    const cards = document.querySelectorAll('card')
 
 })
