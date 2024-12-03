@@ -1,6 +1,6 @@
-//click events
+console.clear();
 
-console.clear()
+//click events
 document.addEventListener('click', (e) => {
 
     if (e.target.className === 'fas fa-bars') {
@@ -14,10 +14,9 @@ document.addEventListener('click', (e) => {
         document.querySelector('.fa-bars').classList.remove('clicked')
     }
 })
-
 // scroll events
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= '470') {
+    if (window.scrollY >= '220') {
         document.querySelector('header').style.backgroundColor = 'var(--theme-color)';
         document.querySelector('.about-content').classList.add('arrived');
     }
