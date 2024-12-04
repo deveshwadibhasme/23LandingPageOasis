@@ -16,6 +16,7 @@ document.addEventListener('click', (e) => {
 })
 // scroll events
 window.addEventListener('scroll', () => {
+    // header related
     if (window.scrollY >= '220') {
         document.querySelector('header').style.backgroundColor = 'var(--theme-color)';
         document.querySelector('.about-content').classList.add('arrived');
@@ -25,7 +26,8 @@ window.addEventListener('scroll', () => {
         document.querySelector('.about-content').classList.remove('arrived');
     }
 
-    const boxes = document.querySelectorAll('.service-cnt .text-cnt').forEach((ele)=>{
+    // services related scroll
+    document.querySelectorAll('.service-cnt .text-cnt').forEach((ele)=>{
         const box = ele.getBoundingClientRect()
         if(window.innerHeight > box.top){
             ele.classList.add('arrived');
@@ -35,6 +37,15 @@ window.addEventListener('scroll', () => {
         }
     })
 
-    const cards = document.querySelectorAll('card')
+    // heading related
+    document.querySelectorAll('.heading').forEach((ele)=>{
+        const box = ele.getBoundingClientRect()
+        if((window.innerHeight - 80) > box.top){   
+            ele.classList.add('arrived');
+            // console.log('box is in view');
+        }else{
+            ele.classList.remove('arrived');
+        }
+    })
 
 })

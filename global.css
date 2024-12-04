@@ -132,12 +132,21 @@ button {
     transition: all 0.8s;
   }
 
-  &:hover {
+  &:hover,.heading.arrived {
     &::after {
       transform: rotateX(180deg) translateY(-18px) scale(1);
     }
     &::before {
       transform: rotateX(180deg) translateY(18px) scale(1);
     }
+  }
+}
+
+.heading.arrived {
+  &::after {
+    transform: rotateX(180deg) translateY(-18px) scale(1);
+  }
+  &::before {
+    transform: rotateX(180deg) translateY(18px) scale(1);
   }
 }

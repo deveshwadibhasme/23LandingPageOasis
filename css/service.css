@@ -71,8 +71,11 @@
 }
 
 @media (max-width: 767px) {
+
   .service-cnt {
     flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
   }
   .service-cnt .text-cnt button {
     margin: 0 auto;
@@ -82,5 +85,10 @@
     flex-direction: column-reverse;
   }
 
+  .service-cnt .text-cnt p {
+    max-width: 550px;
+    width: 100%;
+    margin-left: -10px;
+  }
 
 }
